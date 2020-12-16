@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CARRITO DE LA COMPRA</title>
+    <link rel="stylesheet" href="css/carrito.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/carrito.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <form action="" method="get" name="formulario">
+         <table>
+            <tr >
+               <td>
+                    <label for="nombreart">
+                        Nombre artículo:
+                    </label>
+                </td>
+                <td>
+                    <!-- Recibe autofocus para facilitar entrada datos -->
+                    <input type="text" name="nombreart" autofocus /> <span id="errornombre"></span></br>
+               </td>
+            </tr>
+            <tr >
+                <td>
+                    <label for="precioart">
+                        Precio artículo:
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="precioart" /> <span id="errorprecio"></span></br>
+                </td>
+            </tr>
+            <tr >
+                <td>
+                    <label for="unidades">
+                        Unidades: 
+                    </label>
+                    <select name="unidades">
+                    <!-- Valor por defecto del selector 1 -->
+                        <option selected value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select></br>
+                </td>
+                
+            </tr>
+            <tr >
+                <td>
+                    <input type="button" class="button" name="butCarrito" value="Añadir al carrito">
+                </td>
+            </tr>
+
+         </table> 
+         <table>
+             <tr >
+                 <td>
+                    <label for="arttotal">
+                        Articulos en el carrito:
+                    </label>
+                    <input type="text" name="arttotal" size="50"/></br>
+                 </td>
+             </tr>
+             <tr >
+                 <td>
+                    <label for="preciototal">
+                        Precio total del carrito
+                    </label>
+                    <input type="text" name="preciototal" value=0 /></br>
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                    <label for="formapago">
+                        Forma de pago:
+                    </label>
+                    <select name="formapago" class="button">
+                    <!-- Valor por defecto del selector  -->
+                        <option default value="default">--Seleccione-- </option>
+                        <option value="tarjeta">Tarjeta</option>
+                        <option value="efectivo">Efectivo</option>
+                    </select></br>
+                 </td>
+             </tr>
+
+            <table id="campostarjeta">
+                <tr>
+                    <td>
+                        <label for="titular">
+                            Titular tarjeta:
+                        </label>
+                        <input type="text" name="titular"/></br>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="numtarjeta">
+                            Número tarjeta:
+                        </label>
+                        <input type="text" name="numtarjeta"/></br>
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="cvv">
+                            CVV:
+                        </label>
+                        <input type="text" name="cvv" size=3/></br>
+
+                    </td>
+                </tr>
+            </table>
+            <table id="camposefectivo">
+                <tr>
+                    <td>
+                        <label for="imefectivo">
+                            Importe efectivo:
+                        </label>
+                        <input type="text" name="impefectivo"/></br>
+
+                    </td>
+                </tr>
+            </table>
+             <table>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="condiciones" id="condiciones"> Acepto las condiciones de compra </br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- Boton imprimir deshabilitado -->
+                       <input type="button" class="button" name="butImprimir" value="Imprimir" disabled/>
+                       
+                    </td>
+                    <td>
+                       <input type="button" class="button"  name="butRestablecer"value="Restablecer"/>
+                    </td>
+       
+                </tr>
+             </table>       
+             
+            
+
+    </form>
+</div>
+</body>
+</html>
